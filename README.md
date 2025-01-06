@@ -67,3 +67,21 @@ Após isso, o Vite irá iniciar o servidor e você pode acessar a aplicação no
 ├── index.html           # Arquivo HTML principal
 └── package.json         # Arquivo de configuração do npm
 ````
+#### 5. Funções Principais
+- Cadastro de Produtos:
+
+A tela de cadastro contém um formulário com os campos: nome, descrição, valor e a opção de Disponível para venda.
+O botão de "Cadastrar" irá salvar as informações no localStorage e redirecionar para a lista de produtos.
+
+- Listagem de Produtos:
+
+Após o cadastro de um produto, ele será adicionado à lista que é exibida na tela.
+A listagem é ordenada por valor do produto, do menor para o maior.
+
+- Armazenamento Local:
+
+Os produtos são armazenados no localStorage para garantir que os dados não sejam perdidos após a atualização da página.
+
+- Ordenamento dos items:
+  Para que os produtos sejam ordenados pelo valor basta clicar na thead "Preço".
+  Para que os produtos sejam ordenados pela ordem alfabética basta clicar na thead "Produto".
