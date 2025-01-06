@@ -107,7 +107,9 @@ table {
     color: white;
     cursor: pointer;
   }
-
+  th:hover{
+    background-color: #709e9e;
+  }
   tr:nth-child(even) {
     background-color: #f2f2f2;  
   }
@@ -136,5 +138,21 @@ table {
 
   .plus:hover{
     background-color:#097a7a;
+    border: 1px solid #fff;
+  }
+
+  .add{
+    background-color: #097a7a;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .add:hover{
+    background-color: #1fb9b9;
     border: 1px solid #fff;
   }

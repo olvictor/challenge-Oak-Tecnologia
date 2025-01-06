@@ -47,7 +47,7 @@ const Table = ({produtos,setProdutos}) => {
           {produtos && produtos.map((p,i)=>(
             <tr key={i}>
              <td>{p.nome}</td>
-             <td>{p.valor + " R$"}</td>
+             <td>{"R$ "+ p.valor}</td>
             </tr>
           ))}
         </tbody>

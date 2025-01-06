@@ -13,7 +13,8 @@ function App() {
   const [disponivel,setDisponivel] = useState(null)
   const [desabilitado, setDesabilitado] = useState(true)
   const [produtos, setProdutos] = useState([])
-  
+  const [openModal,setOpenModal] = useState(false)
+
   useEffect(()=>{
    const produtosCadastrados = FormActions.buscarProdutos()
    setProdutos(produtosCadastrados)
@@ -41,12 +42,18 @@ function App() {
 
     setProdutos((prevState) => [...prevState , produtoObj])
     FormActions.cadastrarProduto(produtoObj)
+    setOpenModal(false)
+
+    setNome("")
+    setValor("")
+    setDescricao("")
+    setDesabilitado(true)
   }
   return (
     <>
       <Boxul />
       <div className='container'>
-        <Form.Root>
+        {openModal && <Form.Root>
             <Form.Header title={"Produtos"} />
             <Form.Content>
               <label htmlFor="nome">
@@ -76,10 +83,13 @@ function App() {
                 <button disabled={desabilitado} onClick={handleSubmit}>Cadastrar</button>
             </Form.Footer>
             </Form.Content>
-        </Form.Root>
+        </Form.Root>}
 
         <Table produtos={produtos} setProdutos={setProdutos} />
-      </div>'22222'
+        <button className='add' onClick={()=>setOpenModal(!openModal)}>
+          +
+        </button>
+      </div>
     </>
   )
 }
