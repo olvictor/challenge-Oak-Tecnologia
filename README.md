@@ -83,7 +83,7 @@ A listagem é ordenada por valor do produto, do menor para o maior.
 Os produtos são armazenados no localStorage para garantir que os dados não sejam perdidos após a atualização da página.
 
 - Ordenamento dos items:
-<br>
+
 Para que os produtos sejam ordenados pelo valor basta clicar na thead "Preço".
 <br>
 Para que os produtos sejam ordenados pela ordem alfabética basta clicar na thead "Produto".
